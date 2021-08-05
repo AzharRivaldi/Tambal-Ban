@@ -40,7 +40,7 @@ class MainViewModel : ViewModel() {
                 if (!response.isSuccessful) {
                     Log.e("response", response.toString())
                 } else if (response.body() != null) {
-                    val items = ArrayList(response.body()!!.modelResults)
+                    val items = ArrayList(response.body().modelResults)
                     modelResultsMutableLiveData.postValue(items)
                 }
             }
