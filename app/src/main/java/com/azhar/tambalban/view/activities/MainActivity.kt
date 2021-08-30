@@ -212,5 +212,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             window.attributes = layoutParams
         }
     }
+    
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQ_PERMISSION && resultCode == RESULT_OK) {
+            getLocationViewModel()
+        }
+    }
 
 }
