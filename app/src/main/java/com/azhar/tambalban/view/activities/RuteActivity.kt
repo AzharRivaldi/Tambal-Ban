@@ -203,7 +203,7 @@ class RuteActivity : AppCompatActivity(), OnMapReadyCallback, DirectionCallback 
             val durationInfo = leg.duration
             val strDistance = distanceInfo.text
             val strDuration = durationInfo.text.replace("mins", "mnt")
-            tvDistance!!.text = "Jarak lokasi tujuan dari rumah kamu $strDistance dan waktu tempuh sekitar $strDuration"
+            tvDistance.text = "Jarak lokasi tujuan dari rumah kamu $strDistance dan waktu tempuh sekitar $strDuration"
 
             //set marker current location
             mapsView.addMarker(MarkerOptions()
